@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   int n, *a, aver, count, sum;
+   cin >> n;
+   count = aver = sum = 0;
+   a = new int[n];
+   for(int i = 0;i < n; i++){
+      cin >> a[i];
+      if(a[i] > 0){
+         sum += a[i];
+         count++;
+      }
+   }
+   count != 0 ? aver = sum / count : aver = 0; 
+   
+   if(aver != 0){
+      for(int i = 0; i < n; i++){
+         if(a[i] < 0){
+            a[i] = aver;
+         }
+      }
+   }
+   for(int i = 0;i < n; i++){
+      cout << a[i] << " ";
+   }
+   delete[] a;
+}
