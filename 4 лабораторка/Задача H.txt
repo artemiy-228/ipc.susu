@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   int n, num;
+   double sum;
+   
+   cin >> n;
+   
+   num = (2 << n);
+   sum = num;
+   while(num != 0){
+      sum = num / 2 + 1.0 / sum;
+      num /= 2;
+   
+   }
+   cout.precision(6);
+   cout << fixed << sum;
+   
+}

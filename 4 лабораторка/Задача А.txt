@@ -1,0 +1,19 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   int n, k;
+   double num, sum;
+   cin >> n;
+   sum = 0;
+   num = 1;
+   for(k = 1; k <= n;k++){
+      num *= 1.0 / k;
+      sum += (1 - num) * (1 - num);
+   }
+   cout.precision(6);
+   cout << fixed<< sum;
+   
+}

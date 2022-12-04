@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   int n, k;
+   double sum, num, mult;
+   cin >> n;
+   
+   sum = 0;
+   num = 0;
+   mult = 1;
+   for (k = 1; k <= n; k++){
+      num += 1.0 / (k + 1);
+      mult *= k;
+      sum += mult / num;
+   }
+   cout.precision(6);
+   cout << fixed << sum;
+   
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   int n, k;
+   double num, sum, x;
+   cin >> n >> x;
+   num = 1;
+   sum = 0;
+   for(k = 1; k <= n; k++){
+      num *= x / k;
+      sum += num;
+   
+   }
+   cout.precision(6);
+   cout << fixed << sum;
+}
